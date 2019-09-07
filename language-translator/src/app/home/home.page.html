@@ -1,24 +1,26 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="danger">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Basic 10 words
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-list>
-  <ion-item lines="none" >
-    <p slot="start">English</p>
-    <p slot="end">{{ 'Language'| translate }} </p>
-  </ion-item>
-  <ion-item lines="none" *ngFor="let value of json">
-    <p slot="start">{{value.name}}</p>
-    <p slot="end">{{value.name | translate }} </p>
-<!--    <p (click)="Speak('Bonjour')">speak</p>-->
-  </ion-item>
-</ion-list>
+  <ion-list>
+   <!-- <ion-item lines="none" >
+      <p slot="start">English</p>
+      <p slot="end">{{ 'Language'| translate }} </p>
+    </ion-item>-->
+    <ion-card *ngFor="let value of json; let i = index">
+      <ion-item lines="none" >
+        <p slot="start">{{i + 1}}. {{value.name}}</p>
+        <p slot="end">{{value.name | translate }} </p>
+        <!--    <p (click)="Speak('Bonjour')">speak</p>-->
+      </ion-item>
+    </ion-card>
+  </ion-list>
 </ion-content>

@@ -23,6 +23,15 @@ export class Model {
     },
     {
       name: 'Please'
+    },
+    {
+      name: 'May I come in'
+    },
+    {
+      name: 'Of course'
+    },
+    {
+      name: 'I am Sorry'
     }
   ];
 }
